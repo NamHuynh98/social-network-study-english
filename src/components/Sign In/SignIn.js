@@ -3,7 +3,7 @@ import "./SignIn.scss"
 import { TextField, Checkbox, Button } from "@material-ui/core"
 
 export default class SignIn extends Component {
-	Constructor(props) {
+	constructor(props) {
 		super(props)
 	}
 

@@ -5,7 +5,7 @@ import SignUp from "../../components/Sign Up/SignUp"
 import SignIn from "../../components/Sign In/SignIn"
 
 export default class Authorization extends Component {
-	Constructor(props) {
+	constructor(props) {
 		super(props)
 	}
 
