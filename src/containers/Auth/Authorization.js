@@ -7,15 +7,27 @@ import SignIn from "../../components/Sign In/SignIn"
 export default class Authorization extends Component {
 	constructor(props) {
 		super(props)
+		this.state = {
+			isSignIn: true
+		}
 	}
-
+	onChangePage = () => {
+		this.setState({
+			isSignIn: !this.state.isSignIn
+		})
+	}
 	render() {
 		return (
 			<div className="Authorization__container">
 				<div className="background"></div>
 				<div className="content-form__wrapper">
-					<img className="logo" src={Banner} />
-					<SignIn />
+					<img alt="logo" className="logo" src={Banner} />
+					{this.state.isSignIn ? (
+						<SignIn onChangePage={this.onChangePage} />
+					) : (
+						<SignUp onChangePage={this.onChangePage} />
+					)}
+					<div className="footer">Copyright © NamHuynh Dev.</div>
 				</div>
 			</div>
 		)

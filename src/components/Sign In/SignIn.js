@@ -3,8 +3,8 @@ import "./SignIn.scss"
 import { TextField, Checkbox, Button } from "@material-ui/core"
 
 export default class SignIn extends Component {
-	constructor(props) {
-		super(props)
+	emitEvent = () => {
+		this.props.setSignUp()
 	}
 
 	render() {
@@ -21,10 +21,11 @@ export default class SignIn extends Component {
 						Sign In
 					</Button>
 					<div className="link_wrapper">
-						<a>Forgot password?</a>
-						<a>Don't have an account? Sign Up</a>
+						<div>Forgot password?</div>
+						<div onClick={() => this.props.onChangePage()}>
+							Don't have an account? Sign Up
+						</div>
 					</div>
-					<div className="footer">Copyright © NamHuynh Dev.</div>
 				</div>
 			</div>
 		)

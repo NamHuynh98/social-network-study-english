@@ -3,10 +3,6 @@ import "./SignUp.scss"
 import { TextField, Checkbox, Button } from "@material-ui/core"
 
 export default class SignUp extends Component {
-	constructor(props) {
-		super(props)
-	}
-
 	render() {
 		return (
 			<div className="sign-up__container">
@@ -47,9 +43,10 @@ export default class SignUp extends Component {
 						Sign Up
 					</Button>
 					<div className="link_wrapper">
-						<a>Already have an account? Sign in</a>
+						<div onClick={() => this.props.onChangePage()}>
+							Already have an account? Sign in
+						</div>
 					</div>
-					<div className="footer">Copyright © NamHuynh Dev.</div>
 				</div>
 			</div>
 		)

@@ -15,10 +15,16 @@
 		box-shadow: 0 5px 10px;
 		width: 30%;
 		height: 100%;
-		padding: 0 2rem;
+    padding: 0 2rem;
+    display: flex;
+    flex-direction: column;
 		.logo {
 			margin-top: 2rem;
 			width: 100%;
+    }
+    .footer {
+			color: rgba(0, 0, 0, 0.54);
+			margin: auto auto 2rem;
 		}
 	}
 }
