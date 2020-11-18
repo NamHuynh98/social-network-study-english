@@ -15,12 +15,20 @@
 		box-shadow: 0 5px 10px;
 		width: 30%;
 		height: 100%;
-    padding: 0 2rem;
     display: flex;
     flex-direction: column;
 		.logo {
-			margin-top: 2rem;
-			width: 100%;
+      width: 80%;
+      margin: auto;  
+    }
+    .inner{
+      overflow: hidden;
+      .slide-page{
+        display: flex;
+        width: 200%;
+        transition: all 0.5s ease-in-out 0s;
+        // property / duration / timing-function (linear, ease, ease-in, ease-out, ease-in-out) / delay
+      }
     }
     .footer {
 			color: rgba(0, 0, 0, 0.54);

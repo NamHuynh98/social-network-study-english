@@ -16,17 +16,29 @@ export default class Authorization extends Component {
 			isSignIn: !this.state.isSignIn
 		})
 	}
+	changePage = () => {
+		return this.state.isSignIn ? { marginLeft: "0%" } : { marginLeft: "-100%" }
+	}
+
 	render() {
 		return (
 			<div className="Authorization__container">
 				<div className="background"></div>
 				<div className="content-form__wrapper">
 					<img alt="logo" className="logo" src={Banner} />
-					{this.state.isSignIn ? (
-						<SignIn onChangePage={this.onChangePage} />
-					) : (
-						<SignUp onChangePage={this.onChangePage} />
-					)}
+					<div className="inner">
+						<div
+							className="slide-page"
+							style={
+								this.state.isSignIn
+									? { marginLeft: "0%" }
+									: { marginLeft: "-100%" }
+							}
+						>
+							<SignIn onChangePage={this.onChangePage} />
+							<SignUp onChangePage={this.onChangePage} />
+						</div>
+					</div>
 					<div className="footer">Copyright © NamHuynh Dev.</div>
 				</div>
 			</div>

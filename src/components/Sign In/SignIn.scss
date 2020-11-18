@@ -1,4 +1,6 @@
 .sign-in__container {
+  padding: 0 2rem;
+  width: calc(50% - 4rem);
 	h1 {
 		color: #3f51b5;
 	}
@@ -16,7 +18,8 @@
 		.link_wrapper {
 			justify-content: space-between;
 			display: flex;
-			margin: 10px 0;
+      margin: 10px 0;
+      font-size: smaller;
 			div {
 				color: blue;
 				cursor: pointer;

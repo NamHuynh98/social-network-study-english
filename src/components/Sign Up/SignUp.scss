@@ -1,4 +1,6 @@
 .sign-up__container {
+  padding: 0 2rem;
+  width: calc(50% - 4rem);
 	h1 {
 		color: #3f51b5;
 	}
@@ -20,7 +22,8 @@
 			margin: 10px 0;
 		}
 		.link_wrapper {
-			text-align: right;
+      text-align: right;
+      font-size: smaller;
 			div {
 				cursor: pointer;
 				color: blue;
