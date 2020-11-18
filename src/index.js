@@ -4,10 +4,19 @@ import "./index.css"
 import App from "./App"
 import * as serviceWorker from "./serviceWorker"
 
+import { createStore } from "redux"
+import { Provider } from "react-redux"
+import { reducer } from "./reducers/index"
+
+let store = createStore(reducer)
 ReactDOM.render(
-	<React.StrictMode>
+	<Provider store={store}>
 		<App />
-	</React.StrictMode>,
+	</Provider>,
+
+	// <React.StrictMode>
+	// 	<App />
+	// </React.StrictMode>,
 	document.getElementById("root")
 )
 
