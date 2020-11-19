@@ -4,7 +4,7 @@ import "./Authorization.scss"
 import SignUp from "../../components/Sign Up/SignUp"
 import SignIn from "../../components/Sign In/SignIn"
 
-export default class Authorization extends Component {
+class Authorization extends Component {
 	constructor(props) {
 		super(props)
 		this.state = {
@@ -19,6 +19,7 @@ export default class Authorization extends Component {
 	changePage = () => {
 		return this.state.isSignIn ? { marginLeft: "0%" } : { marginLeft: "-100%" }
 	}
+	componentDidMount = () => {}
 
 	render() {
 		return (
@@ -45,3 +46,5 @@ export default class Authorization extends Component {
 		)
 	}
 }
+
+export default Authorization

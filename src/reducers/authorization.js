@@ -1,13 +1,28 @@
+import * as types from "../utils/typeReducers"
+
 const initialState = {
-	username: "",
-	password: ""
+	email: "",
+	password: "",
+	firstName: "",
+	lastName: ""
 }
 
-export function reducer(state = initialState, action) {
+const authorization = (state = initialState, action) => {
 	switch (action.type) {
-		case "getData":
-			return { ...state, oke: "oke" }
+		case types.SIGN_IN:
+			state.email = action.email
+			state.password = action.password
+			return state
+		case types.REGISTER:
+			state.email = action.dataRegister.email
+			state.password = action.dataRegister.password
+			state.firstName = action.dataRegister.firstName
+			state.lastName = action.dataRegister.lastName
+			console.log(state)
+			return state
 		default:
 			return state
 	}
 }
+
+export default authorization

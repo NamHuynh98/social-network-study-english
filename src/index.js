@@ -6,17 +6,13 @@ import * as serviceWorker from "./serviceWorker"
 
 import { createStore } from "redux"
 import { Provider } from "react-redux"
-import { reducer } from "./reducers/index"
+import rootReducers from "./reducers/index"
 
-let store = createStore(reducer)
+let store = createStore(rootReducers)
 ReactDOM.render(
 	<Provider store={store}>
 		<App />
 	</Provider>,
-
-	// <React.StrictMode>
-	// 	<App />
-	// </React.StrictMode>,
 	document.getElementById("root")
 )
 

@@ -1,7 +1,12 @@
 import * as types from "../utils/typeReducers"
 
-export const SignIn = (username, password) => ({
+export const SignIn = (email, password) => ({
 	type: types.SIGN_IN,
-	username,
+	email,
 	password
+})
+
+export const Register = dataRegister => ({
+	type: types.REGISTER,
+	dataRegister
 })
